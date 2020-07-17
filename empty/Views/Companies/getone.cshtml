@@ -1,0 +1,82 @@
+﻿@model empty.Models.Company
+
+@{
+    ViewBag.Title = "getone";
+}
+
+<h2>getone</h2>
+
+<div>
+    <h4>Company</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ctype)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ctype)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.capital)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.capital)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.logo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.logo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Curl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Curl)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.CID })*@ |
+    @Html.ActionLink("Back to List", "Index")
+</p>

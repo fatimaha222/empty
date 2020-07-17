@@ -1,0 +1,90 @@
+﻿@model IEnumerable<empty.Models.Company>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create",null,new { @class="btn btn-info "})
+</p>
+<p>
+    <a href="@Url.Action("Create","Companies")" class="btn btn-primary" target="_blank"> 
+    <span class="glyphicon glyphicon-plus"> </span>
+    new company </a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ctype)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.capital)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.logo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Curl)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ctype)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.capital)
+        </td>
+        <td>
+        <img src="@Url.Content(item.logo)" width="50" height="50" />
+        </td>
+        <td>
+            <a href="@Url.Content(item.Curl)" target="_blank">
+                @Html.DisplayFor(modelItem => item.Curl)
+            </a>
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CID }, new { @class = "btn btn-success " }) |
+          
+            @Html.ActionLink("Delete", "Delete", new { id=item.CID }, new { @class = "btn btn-danger " })
+        </td>
+    </tr>
+}
+
+</table>
+<div class="alert-info">
+    Count= @Html.Action("Count") <br />
+    @*@Html.Action("Count","Companies", new { id=1})*@
+
+    Max = @Html.Action("Max") <br />
+    Min = @Html.Action("Min") <br />
+    Avarage = @Html.Action("Avarage") <br />
+</div>

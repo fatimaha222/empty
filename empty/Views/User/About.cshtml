@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "About";
+}
+
+<h2>About</h2>
+<h2> @DateTime.Now.ToShortDateString()</h2>
+
+@{DateTime.Now.ToShortDateString();
+    int m = 0;
+
+    <text> this is </text> @m
+}
+
+<p> @ViewBag.vb</p>
+<p>@ViewData["v"]</p>
+<p>@TempData["fefe"]</p>
+<p>@Session["hi"]</p>

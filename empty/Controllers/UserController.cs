@@ -8,7 +8,7 @@ namespace empty.Controllers
 {
     public class UserController : Controller
     {
-        // GET: User
+        // GET: User_
         public ActionResult Index()
         {
             ViewBag.vb = "hello";
